@@ -7,3 +7,7 @@ body {
     background-color: cornsilk;
     padding-left: 2%;
 }
+
+li {
+    text-decoration-color: darkgoldenrod;
+}
