@@ -1,15 +1,15 @@
-# ![pageres](media/promo.png)
+# ![First-webpage](media/promo.png)
 
-[![Build Status](https://travis-ci.org/Josephshitandi/pageres.svg?branch=master)](https://travis-ci.org/Josephshitandi/pageres) [![Coverage Status](https://coveralls.io/repos/Josephshitandi/pageres/badge.svg?branch=master)](https://coveralls.io/r/Josephshitandi/pageres?branch=master) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
+[![Build Status](https://travis-ci.org/Josephshitandi/First-webpage.svg?branch=master)](https://travis-ci.org/Josephshitandi/First-webpage) [![Coverage Status](https://coveralls.io/repos/Josephshitandi/First-webpage/badge.svg?branch=master)](https://coveralls.io/r/Josephshitandi/First-webpage?branch=master) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
 Capture screenshots of websites in various resolutions. A good way to make sure your websites are responsive. It's speedy and generates 100 screenshots from 10 different websites in just over a minute. It can also be used to render SVG images.
 
-*See [pageres-cli](https://github.com/Josephshitandi/pageres-cli) for the command-line tool.*
+*See [First-webpage-cli](https://github.com/Josephshitandi/First-webpage-cli) for the command-line tool.*
 
 ## Install
 
 ```
-$ npm install pageres
+$ npm install First-webpage
 ```
 
 Note to Linux users: If you get a "No usable sandbox!" error, you need to enable [system sandboxing](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#setting-up-chrome-linux-sandbox).
@@ -17,11 +17,11 @@ Note to Linux users: If you get a "No usable sandbox!" error, you need to enable
 ## Usage
 
 ```js
-const Pageres = require('pageres');
+const First-webpage = require('First-webpage');
 
 (async () => {
-	await new Pageres({delay: 2})
-		.src('https://github.com/Josephshitandi/pageres', ['480x320', '1024x768', 'iphone 5s'], {crop: true})
+	await new First-webpage({delay: 2})
+		.src('https://github.com/Josephshitandi/First-webpage', ['480x320', '1024x768', 'iphone 5s'], {crop: true})
 		.src('https://Josephshitandi.com', ['1280x1024', '1920x1080'])
 		.src('data:text/html,<h1>Awesome!</h1>', ['1024x768'])
 		.dest(__dirname)
@@ -33,7 +33,7 @@ const Pageres = require('pageres');
 
 ## API
 
-### Pageres(options?)
+### First-webpage(options?)
 
 #### options
 
@@ -164,7 +164,7 @@ Default: `false`
 
 Set background color to `transparent` instead of `white` if no background is set.
 
-### pageres.src(url, sizes, options?)
+### First-webpage.src(url, sizes, options?)
 
 Add a page to screenshot.
 
@@ -192,7 +192,7 @@ Type: `object`
 
 Options set here will take precedence over the ones set in the constructor.
 
-### pageres.dest(directory)
+### First-webpage.dest(directory)
 
 Set the destination directory.
 
@@ -200,17 +200,17 @@ Set the destination directory.
 
 Type: `string`
 
-### pageres.run()
+### First-webpage.run()
 
-Run pageres. Returns `Promise<Buffer[]>`.
+Run First-webpage. Returns `Promise<Buffer[]>`.
 
 ## Task runners
 
-Check out [grunt-pageres](https://github.com/Josephshitandi/grunt-pageres) if you're using Grunt.
+Check out [grunt-First-webpage](https://github.com/Josephshitandi/grunt-First-webpage) if you're using Grunt.
 
 For Gulp and Broccoli, just use the API directly. No need for a wrapper plugin.
 
-## Built with Pageres
+## Built with First-webpage
 
 - [Break Shot](https://github.com/Josephshitandi/break-shot) - Desktop app for capturing screenshots of responsive websites.
 
